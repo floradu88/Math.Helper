@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Math.Helper.Core.Arguments;
 
 namespace Math.Helper.Core.Interfaces
 {
     public interface IFunction
     {
-        TParamType Calculate<TParamType, TType>(IEnumerable<TParamType> parameters) where TParamType : IArgument<TType>;
+        decimal Calculate(IEnumerable<RangeArgument> parameters);
     }
 }

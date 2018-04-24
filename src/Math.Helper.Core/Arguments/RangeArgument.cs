@@ -4,8 +4,13 @@ namespace Math.Helper.Core.Arguments
 {
     using Math.Helper.Core.Interfaces;
 
-    public class RangeArgument<TType> : IArgument<TType>
+    public class RangeArgument
     {
+        public decimal this[int i] {
+            get { return Values[i]; }
+            set { Values[i] = value; }
+        }
+
         public int Length
         {
             get
@@ -17,6 +22,6 @@ namespace Math.Helper.Core.Arguments
             }
         }
 
-        public List<TType> Values { get; set; }
+        public List<decimal> Values { get; set; }
     }
 }
